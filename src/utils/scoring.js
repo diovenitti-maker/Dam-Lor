@@ -45,6 +45,34 @@ export function computeStreak(challenges) {
   return { chi: last, count }
 }
 
+// Il filotto più lungo di sempre (record), tra tutte le sfide vinte da un giocatore di fila
+export function computeLongestStreak(challenges) {
+  const sorted = sortByDate(challenges).filter(
+    (c) => c.vittoria === 'Damiano' || c.vittoria === 'Lorenzo'
+  )
+  if (sorted.length === 0) return { chi: null, count: 0 }
+
+  let bestChi = sorted[0].vittoria
+  let bestCount = 1
+  let curChi = sorted[0].vittoria
+  let curCount = 1
+
+  for (let i = 1; i < sorted.length; i++) {
+    if (sorted[i].vittoria === curChi) {
+      curCount++
+    } else {
+      curChi = sorted[i].vittoria
+      curCount = 1
+    }
+    if (curCount > bestCount) {
+      bestCount = curCount
+      bestChi = curChi
+    }
+  }
+
+  return { chi: bestChi, count: bestCount }
+}
+
 export function countByWinner(challenges, name) {
   return challenges.filter((c) => c.vittoria === name).length
 }
