@@ -41,11 +41,11 @@ export default function Scoreboard({ challenges, dam, lor }) {
           </span>
         </div>
         <div className="chip">
-          <span className="chip-label">Record Damiano</span>
+          <span className="chip-label">Record filotto Damiano</span>
           <span className="chip-value text-dam">{record.Damiano}</span>
         </div>
         <div className="chip">
-          <span className="chip-label">Record Lorenzo</span>
+          <span className="chip-label">Record filotto Lorenzo</span>
           <span className="chip-value text-lor">{record.Lorenzo}</span>
         </div>
       </div>
