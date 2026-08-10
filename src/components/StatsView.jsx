@@ -44,8 +44,8 @@ export default function StatsView({ challenges }) {
                 labelStyle={{ color: '#eef1f7' }}
                 labelFormatter={(v) => new Date(v).toLocaleDateString('it-IT')}
               />
-              <Line type="stepAfter" dataKey="Damiano" stroke="#3fa9f5" strokeWidth={2} dot={false} />
-              <Line type="stepAfter" dataKey="Lorenzo" stroke="#ff7a45" strokeWidth={2} dot={false} />
+              <Line type="stepAfter" dataKey="Damiano" stroke="#ff7a45" strokeWidth={2} dot={false} />
+              <Line type="stepAfter" dataKey="Lorenzo" stroke="#2dd4bf" strokeWidth={2} dot={false} />
             </LineChart>
           </ResponsiveContainer>
         ) : (
