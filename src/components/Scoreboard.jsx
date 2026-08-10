@@ -6,6 +6,8 @@ export default function Scoreboard({ challenges, dam, lor }) {
   const streak = computeStreak(challenges)
   const record = computeLongestStreakByPlayer(challenges)
   const giocate = challenges.length
+  const pareggi = challenges.filter((c) => c.vittoria === 'Pareggio').length
+  const annullate = challenges.filter((c) => c.vittoria === 'Annullata').length
   const anni = anniDiSfida(challenges)
 
   return (
@@ -35,8 +37,16 @@ export default function Scoreboard({ challenges, dam, lor }) {
           <span className="chip-value">{giocate}</span>
         </div>
         <div className="chip">
+          <span className="chip-label">Pareggi</span>
+          <span className="chip-value">{pareggi}</span>
+        </div>
+        <div className="chip">
+          <span className="chip-label">Sfide annullate</span>
+          <span className="chip-value">{annullate}</span>
+        </div>
+        <div className="chip">
           <span className="chip-label">Filotto attuale</span>
-          <span className={`chip-value ${streak.chi === 'Damiano' ? 'text-dam' : streak.chi === 'Lorenzo' ? 'text-lor' : ''}`}>
+          <span className={`chip-value chip-value-small ${streak.chi === 'Damiano' ? 'text-dam' : streak.chi === 'Lorenzo' ? 'text-lor' : ''}`}>
             {streak.count > 0 ? `${streak.chi} × ${streak.count}` : '—'}
           </span>
         </div>
