@@ -1,10 +1,10 @@
-import { computeStreak, topLuogo } from '../utils/scoring.js'
+import { computeStreak, computeLongestStreak } from '../utils/scoring.js'
 
 export default function Scoreboard({ challenges, dam, lor }) {
   const total = dam + lor
   const damPct = total === 0 ? 50 : (dam / total) * 100
   const streak = computeStreak(challenges)
-  const luogo = topLuogo(challenges)
+  const record = computeLongestStreak(challenges)
   const giocate = challenges.length
   const anni = anniDiSfida(challenges)
 
@@ -35,16 +35,21 @@ export default function Scoreboard({ challenges, dam, lor }) {
           <span className="chip-value">{giocate}</span>
         </div>
         <div className="chip">
-          <span className="chip-label">Striscia in corso</span>
+          <span className="chip-label">Filotto</span>
           <span className={`chip-value ${streak.chi === 'Damiano' ? 'text-dam' : streak.chi === 'Lorenzo' ? 'text-lor' : ''}`}>
-            {streak.count > 0 ? `${streak.count}× ${streak.chi}` : '—'}
+            {streak.count > 0 ? `${streak.chi} × ${streak.count}` : '—'}
           </span>
         </div>
-        <div className="chip">
-          <span className="chip-label">Arena preferita</span>
-          <span className="chip-value chip-value-small">{luogo ? luogo.luogo : '—'}</span>
-        </div>
       </div>
+
+      {record.count > 0 && (
+        <div className="record-band">
+          <span className="record-label">🏆 Filotto record</span>
+          <span className={`record-value ${record.chi === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
+            {record.chi} × {record.count}
+          </span>
+        </div>
+      )}
     </section>
   )
 }
