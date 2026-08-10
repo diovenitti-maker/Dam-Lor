@@ -1,10 +1,10 @@
-import { computeStreak, computeLongestStreak } from '../utils/scoring.js'
+import { computeStreak, computeLongestStreakByPlayer } from '../utils/scoring.js'
 
 export default function Scoreboard({ challenges, dam, lor }) {
   const total = dam + lor
   const damPct = total === 0 ? 50 : (dam / total) * 100
   const streak = computeStreak(challenges)
-  const record = computeLongestStreak(challenges)
+  const record = computeLongestStreakByPlayer(challenges)
   const giocate = challenges.length
   const anni = anniDiSfida(challenges)
 
@@ -40,16 +40,15 @@ export default function Scoreboard({ challenges, dam, lor }) {
             {streak.count > 0 ? `${streak.chi} × ${streak.count}` : '—'}
           </span>
         </div>
-      </div>
-
-      {record.count > 0 && (
-        <div className="record-band">
-          <span className="record-label">🏆 Filotto record</span>
-          <span className={`record-value ${record.chi === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
-            {record.chi} × {record.count}
+        <div className="chip">
+          <span className="chip-label">Record filotto</span>
+          <span className="chip-value chip-value-small">
+            <span className="text-lor">Lor {record.Lorenzo}</span>
+            {' · '}
+            <span className="text-dam">Dam {record.Damiano}</span>
           </span>
         </div>
-      )}
+      </div>
     </section>
   )
 }
