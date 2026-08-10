@@ -35,18 +35,18 @@ export default function Scoreboard({ challenges, dam, lor }) {
           <span className="chip-value">{giocate}</span>
         </div>
         <div className="chip">
-          <span className="chip-label">Filotto</span>
+          <span className="chip-label">Filotto attuale</span>
           <span className={`chip-value ${streak.chi === 'Damiano' ? 'text-dam' : streak.chi === 'Lorenzo' ? 'text-lor' : ''}`}>
             {streak.count > 0 ? `${streak.chi} × ${streak.count}` : '—'}
           </span>
         </div>
         <div className="chip">
-          <span className="chip-label">Record filotto</span>
-          <span className="chip-value chip-value-small">
-            <span className="text-lor">Lor {record.Lorenzo}</span>
-            {' · '}
-            <span className="text-dam">Dam {record.Damiano}</span>
-          </span>
+          <span className="chip-label">Record Damiano</span>
+          <span className="chip-value text-dam">{record.Damiano}</span>
+        </div>
+        <div className="chip">
+          <span className="chip-label">Record Lorenzo</span>
+          <span className="chip-value text-lor">{record.Lorenzo}</span>
         </div>
       </div>
     </section>
