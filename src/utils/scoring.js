@@ -73,6 +73,31 @@ export function computeLongestStreak(challenges) {
   return { chi: bestChi, count: bestCount }
 }
 
+// Il record di filotto per ciascun giocatore separatamente
+export function computeLongestStreakByPlayer(challenges) {
+  const sorted = sortByDate(challenges).filter(
+    (c) => c.vittoria === 'Damiano' || c.vittoria === 'Lorenzo'
+  )
+  const best = { Damiano: 0, Lorenzo: 0 }
+  if (sorted.length === 0) return best
+
+  let curChi = sorted[0].vittoria
+  let curCount = 1
+  best[curChi] = 1
+
+  for (let i = 1; i < sorted.length; i++) {
+    if (sorted[i].vittoria === curChi) {
+      curCount++
+    } else {
+      curChi = sorted[i].vittoria
+      curCount = 1
+    }
+    if (curCount > best[curChi]) best[curChi] = curCount
+  }
+
+  return best
+}
+
 export function countByWinner(challenges, name) {
   return challenges.filter((c) => c.vittoria === name).length
 }
