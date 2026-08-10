@@ -6,6 +6,7 @@ const FILTERS = [
   { key: 'Damiano', label: 'Damiano' },
   { key: 'Lorenzo', label: 'Lorenzo' },
   { key: 'Pareggio', label: 'Pareggi' },
+  { key: 'Annullata', label: 'Annullate' },
 ]
 
 export default function HistoryFeed({ challenges, onDelete }) {
@@ -18,11 +19,7 @@ export default function HistoryFeed({ challenges, onDelete }) {
     if (order === 'desc') list = [...list].reverse()
 
     if (filter !== 'tutte') {
-      list = list.filter((c) =>
-        filter === 'Pareggio'
-          ? c.vittoria === 'Pareggio' || c.vittoria === 'Annullata'
-          : c.vittoria === filter
-      )
+      list = list.filter((c) => c.vittoria === filter)
     }
 
     if (query.trim()) {
