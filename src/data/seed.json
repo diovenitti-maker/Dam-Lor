@@ -1,0 +1,632 @@
+[
+  {
+    "n": 1,
+    "gara": "600m",
+    "proposta": "Entrambi",
+    "descrizione": "Damiano: 1’29”00\nLorenzo: 1’29”10",
+    "data": "2011-07-14",
+    "luogo": "Campo “8 Settembre”, Frascati",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 2,
+    "gara": "“Pizzamond League”",
+    "proposta": "Entrambi",
+    "descrizione": "Risultati in allegati",
+    "data": "Settembre e Ottobre 2011",
+    "luogo": "Campo “8 Settembre”, Frascati",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 3,
+    "gara": "Io sposto te",
+    "proposta": "Lorenzo",
+    "descrizione": "Spinte Cinesi",
+    "data": "2012-05-01",
+    "luogo": "Casa Mauro Consoli",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 4,
+    "gara": "Tu sposti me",
+    "proposta": "Lorenzo",
+    "descrizione": "Spinte Cinesi",
+    "data": "2012-05-01",
+    "luogo": "Casa Mauro Consoli",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 5,
+    "gara": "PS3 (Motor Storm)",
+    "proposta": "Damiano",
+    "descrizione": "Gara singola",
+    "data": "2012-05-01",
+    "luogo": "Casa Mauro Consoli",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 6,
+    "gara": "PS3 (Motor Storm)",
+    "proposta": "Damiano",
+    "descrizione": "Gara singola",
+    "data": "2012-05-01",
+    "luogo": "Casa Mauro Consoli",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 7,
+    "gara": "PS3 (Motor Storm)",
+    "proposta": "Damiano",
+    "descrizione": "Gara singola",
+    "data": "2012-05-01",
+    "luogo": "Casa Mauro Consoli",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 8,
+    "gara": "Cronoscalata Tuscolo",
+    "proposta": "Lorenzo",
+    "descrizione": "Bici Lorenzo molto più scarsa di quella di Damiano",
+    "data": "2012-06-01",
+    "luogo": "Frascati - Tuscolo (per Frascati)",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 9,
+    "gara": "Cronodiscesa Tuscolo",
+    "proposta": "Lorenzo",
+    "descrizione": "Bici Lorenzo molto più scarsa di quella di Damiano",
+    "data": "2012-06-01",
+    "luogo": "Tuscolo - Frascati (per Grottaferrata)",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 10,
+    "gara": "Partita tennis",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3: due vittorie per Lorenzo (6-1 e 6-4)",
+    "data": "2012-06-01",
+    "luogo": "Tor Vergata (PP1)",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 11,
+    "gara": "\"Decathlon de' noantri\"",
+    "proposta": "Entrambi",
+    "descrizione": "Risultati in allegati",
+    "data": "2012-09-15",
+    "luogo": "Campo “8 Settembre”, Frascati",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 12,
+    "gara": "Ping pong",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3: due vittorie per Damiano (21-15 e 21-16)",
+    "data": "2012-10-14",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 13,
+    "gara": "Corsa coi sacchi",
+    "proposta": "Lorenzo",
+    "descrizione": "15m ca.: Lorenzo 4”00 - Damiano 4”20",
+    "data": "2012-10-14",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 14,
+    "gara": "Biliardino",
+    "proposta": "Entrambi",
+    "descrizione": "Al meglio dei 3: due vittorie per Damiano (10-2 e 10-6)",
+    "data": "2012-10-27",
+    "luogo": "Casa Damiano Cavaliere",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 15,
+    "gara": "Corsa in salita",
+    "proposta": "Lorenzo",
+    "descrizione": "Corsa in salita fino ad un roccione in un bosco di faggi (100m ca.)",
+    "data": "2012-11-25",
+    "luogo": "Monte Livata",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 16,
+    "gara": "Scacchi",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3: prima vittoria per Lorenzo (durata: 60’) (scacco matto con Regina e Torre), seconda vittoria per Damiano (durata: 45’) (scacco matto con Regina e Alfiere), terza vittoria per Lorenzo (durata: 70’) (pezzi rimasti: Damiano con Re e Lorenzo con Re e Pedone trasformatosi in regina e con i quali ha portato lo scacco matto)",
+    "data": "2012-11-03",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 17,
+    "gara": "Corsa in salita",
+    "proposta": "Lorenzo",
+    "descrizione": "Corsa sull’ultimo tratto in salita del Giro Del Lago (dopo il boschetto)",
+    "data": "2013-02-17",
+    "luogo": "Lago di Castel Gandolfo",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 18,
+    "gara": "Trazioni",
+    "proposta": "Lorenzo",
+    "descrizione": "11 per Damiano e 10 per Lorenzo",
+    "data": "2013-06-30",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 19,
+    "gara": "Isometria pancia in sotto",
+    "proposta": "Damiano",
+    "descrizione": "Lorenzo crolla a 2’30”, Damiano subito dopo",
+    "data": "2013-06-30",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 20,
+    "gara": "Indovinello Einstein",
+    "proposta": "Damiano",
+    "descrizione": "Sfida a distanza, ergo a fiducia (annullata causa “imprecisa definizione di regole”)",
+    "data": "2013-07-01",
+    "luogo": "Casa propria",
+    "vittoria": "Annullata"
+  },
+  {
+    "n": 21,
+    "gara": "Massimale bilanciere",
+    "proposta": "Lorenzo",
+    "descrizione": "78 kg per Lorenzo e 58 Kg per Damiano",
+    "data": "2013-07-19",
+    "luogo": "Campo “8 Settembre”, Frascati",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 22,
+    "gara": "Molla",
+    "proposta": "Damiano",
+    "descrizione": "2 sfide avambraccio dx (ripetizioni: Lorenzo 70, Damiano 68, in continuità: Lorenzo 1’18”49, Damiano 1’07”36) [non è stato necessario lo spareggio]",
+    "data": "2013-07-19",
+    "luogo": "Campo “8 Settembre”, Frascati",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 23,
+    "gara": "Addominali",
+    "proposta": "Lorenzo",
+    "descrizione": "Su panca inclinata (25 per Damiano e 26 per Lorenzo)",
+    "data": "2013-07-19",
+    "luogo": "Campo “8 Settembre”, Frascati",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 24,
+    "gara": "Partita tennis",
+    "proposta": "Lorenzo",
+    "descrizione": "1 set da 6 game a 4 per Lorenzo (Damiano è partito con 2 game di vantaggio)",
+    "data": "2013-07-19",
+    "luogo": "Campi da tennis “La Madonnella”, Grottaferrata",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 25,
+    "gara": "Salto da fermo",
+    "proposta": "Damiano",
+    "descrizione": "Salto per differenza con l’altezza (Damiano 57 cm, Lorenzo 67 cm)",
+    "data": "2013-07-19",
+    "luogo": "Campi da tennis “La Madonnella”, Grottaferrata",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 26,
+    "gara": "Indovinello a catena",
+    "proposta": "Damiano",
+    "descrizione": "A distanza....a fiducia (45” per Lorenzo e 49” per Damiano)",
+    "data": "2013-10-08",
+    "luogo": "Casa propria",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 27,
+    "gara": "Equilibrio statico su Slackline",
+    "proposta": "Damiano",
+    "descrizione": "Damiano: 3’’74\nLorenzo: 4’’22",
+    "data": "2013-10-20",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 28,
+    "gara": "Numero passi su Slackline",
+    "proposta": "Damiano",
+    "descrizione": "Damiano: 4 passi\nLorenzo: 2 passi",
+    "data": "2013-10-20",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 29,
+    "gara": "Trazioni appesi ad un ramo di albero",
+    "proposta": "Damiano",
+    "descrizione": "Lorenzo: 15\nDamiano: 13\n(Lorenzo è partito con 2 trazioni di vantaggio)",
+    "data": "2013-10-20",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 30,
+    "gara": "Ping pong",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3: due vittorie per Damiano (21-17 e 21-16)",
+    "data": "2013-10-20",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 31,
+    "gara": "Ping pong",
+    "proposta": "Lorenzo",
+    "descrizione": "Con mano sinistra (al meglio dei 3: due vittorie per Damiano (21-19 e 21-18))",
+    "data": "2013-10-20",
+    "luogo": "Casa Giada Mancini",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 32,
+    "gara": "Dama Cinese",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3: due vittorie per Lorenzo",
+    "data": "2014-02-05",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 33,
+    "gara": "Sudoku",
+    "proposta": "Damiano",
+    "descrizione": "Al meglio dei 3: due vittorie per Damiano (su velocità (Damiano: 10’04”, Lorenzo: 10’10” abbondanti e con errore) e su difficoltà (Damiano: 13’28”, Lorenzo: +∞)) (combattuta su velocità, in scioltezza su difficoltà)",
+    "data": "2014-02-05",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 34,
+    "gara": "Scacchi",
+    "proposta": "Damiano",
+    "descrizione": "Botta secca. Vittoria meritata per mossa strategica: regina per regina con attacco immediato da parte di un pedone ai danni di una torre sull’ultima fila ⇒ riprende la regina!!",
+    "data": "2014-02-05",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 35,
+    "gara": "Arrampicata",
+    "proposta": "Damiano",
+    "descrizione": "Lorenzo su una F, Damiano su una F++ con un solo braccio: Lorenzo non è partito accoppiando!!",
+    "data": "2014-04-04",
+    "luogo": "Palestra Vertical Park",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 36,
+    "gara": "Biliardino",
+    "proposta": "Lorenzo",
+    "descrizione": "10 a 1. Se Lorenzo rimaneva a 0 (ci è mancato poco) doveva passare sotto il biliardino!!!",
+    "data": "2014-04-04",
+    "luogo": "Palestra Vertical Park",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 37,
+    "gara": "MadRace",
+    "proposta": "Damiano",
+    "descrizione": "Gara “non competitiva” di 5 Km con 7 ostacoli. Le sfide sono state:\nSIMULATORE CANOTTAGGIO: bisognava arrivare a 400W, Lorenzo ci è arrivato con 3 remate e Damiano (pensava era rotto il simulatore e invece…) con almeno una 20ina…vittoria per Lorenzo.\nSALTO TRIPLO: Damiano azzecca subito il salto, Lorenzo sbaglia combinazione di passi e fa dunque un secondo tentativo superando Damiano. Anche se quest’ultima cosa non è stata propriamente etica, viene comunque dato il punto a Lorenzo a causa di un dibattito finito in appello dalla sua.\nVOLATA: vittoria netta per Damiano (schivando le persone e i bambini).\nSPRINT IN SALITA CON PARTENZA RANNICCHIATI: Lorenzo parte con riflessi rallentati, Damiano lo aspetta, secondo Lorenzo non è vero, e non c’è scampo. Vittoria netta per Damiano (anche qui ricorso in appello!).                                                                              DUNQUE: PAREGGIO TOTALE.",
+    "data": "2014-04-06",
+    "luogo": "Laghetto Dell’Eur",
+    "vittoria": "Pareggio"
+  },
+  {
+    "n": 38,
+    "gara": "Spartan Race (Sprint)",
+    "proposta": "Damiano",
+    "descrizione": "Gara competitiva di 5 Km con 15 ostacoli. Damiano ha vinto la sfida sulla gara arrivando prima di Lorenzo (per un pelo, sugli ostacoli Lorenzo guadagnava terreno (ultimo muro: Damiano ringrazia il piedino!!!)), Lorenzo ha vinto la sfida sugli ostacoli chiudendone 15/15 a differenza di Damiano che ne ha chiusi 14/15. [Risultati in allegati].",
+    "data": "2014-04-26",
+    "luogo": "Stadio Dei Marmi",
+    "vittoria": "Pareggio"
+  },
+  {
+    "n": 39,
+    "gara": "Corsa su gradini in salita",
+    "proposta": "Lorenzo",
+    "descrizione": "Corsa su gradini dalla fine dei 200m in salita dietro al campo fino in cima. Possibilità di saltare quanti gradini si vuole.",
+    "data": "2014-06-01",
+    "luogo": "Frascati (arrivo dei 200m in salita)",
+    "vittoria": "Pareggio"
+  },
+  {
+    "n": 40,
+    "gara": "Trazioni",
+    "proposta": "Lorenzo",
+    "descrizione": "Alla sbarra uno fronte l’altro e alla stessa velocità. Damiano morto a 11 non finendola e Lorenzo avrebbe fatto anche la dodicesima.",
+    "data": "2015-09-18",
+    "luogo": "Boschetto Villa Torlonia",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 41,
+    "gara": "Appesi con braccia piegate",
+    "proposta": "Lorenzo",
+    "descrizione": "Non bisognava scendere oltre i 90°. Per un pelo ha mollato prima Lorenzo.",
+    "data": "2015-09-18",
+    "luogo": "Boschetto Villa Torlonia",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 42,
+    "gara": "Appesi con braccia stese",
+    "proposta": "Damiano",
+    "descrizione": "Vittoria di Damiano anche qui per un pelo.",
+    "data": "2015-09-18",
+    "luogo": "Boschetto Villa Torlonia",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 43,
+    "gara": "Appesi per un solo braccio",
+    "proposta": "Damiano",
+    "descrizione": "Vittoria netta per Damiano. Lorenzo non è rimasto attaccato neanche per due secondi.",
+    "data": "2015-09-18",
+    "luogo": "Boschetto Villa Torlonia",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 44,
+    "gara": "Addominali",
+    "proposta": "Lorenzo",
+    "descrizione": "Alle parallele portando le gambe sempre sopra le aste. Lorenzo vince nettamente.",
+    "data": "2015-09-18",
+    "luogo": "Boschetto Villa Torlonia",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 45,
+    "gara": "Scacchi",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3 (max 1’15’’ a mossa): prima vittoria per Lorenzo (durata: 35’) (scacco matto con Regina e Varie), seconda vittoria per Lorenzo (durata: 45’) (scacco matto con Regina e Torre)",
+    "data": "2015-09-19",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 46,
+    "gara": "Morra cinese",
+    "proposta": "Damiano",
+    "descrizione": "Chi arriva prima a 5. 5 a 3 per Lorenzo.",
+    "data": "2015-09-20",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 47,
+    "gara": "Ping pong",
+    "proposta": "Damiano",
+    "descrizione": "Al meglio dei 3: due vittorie per Damiano (21-15 e 21-12)",
+    "data": "2015-09-20",
+    "luogo": "Casa Lorenzo",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 48,
+    "gara": "Table Boulder",
+    "proposta": "Damiano",
+    "descrizione": "Girare intorno alla panca senza farla ribaltare",
+    "data": "2016-05-29",
+    "luogo": "Parco Avventura Tarquinia",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 49,
+    "gara": "Salto sasso su acqua",
+    "proposta": "Damiano",
+    "descrizione": "Salto in ruscello!! Vari tentativi per patta…!!!",
+    "data": "2021-07-24",
+    "luogo": "Zompo Lo Schioppo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 50,
+    "gara": "Salto del ruscello andata",
+    "proposta": "Lorenzo",
+    "descrizione": "Chi salta il ruscello senza bagnarsi i piedi (almeno 2/3 metri)",
+    "data": "2021-07-24",
+    "luogo": "Zompo Lo Schioppo",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 51,
+    "gara": "Salto del ruscello ritorno",
+    "proposta": "Damiano",
+    "descrizione": "Chi salta il ruscello senza bagnarsi i piedi (almeno 2/3 metri)",
+    "data": "2021-07-24",
+    "luogo": "Zompo Lo Schioppo",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 52,
+    "gara": "Ping pong",
+    "proposta": "Lorenzo",
+    "descrizione": "Sfida secca…..Damiano a favore di vento (in questo caso era peggio per schiacciate)",
+    "data": "2021-11-07",
+    "luogo": "Casa Damiano",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 53,
+    "gara": "Super Cluedo",
+    "proposta": "Damiano",
+    "descrizione": "Lorenzo ha accusato pensando di essere certo al 100%. Lui ne era convinto vedendo solo 3 angoletti……ma gli era sfuggito un particolare e dunque aveva solo il 50%. Pensava che non c’erano errori……invece l’errore ci doveva essere per forza!!",
+    "data": "2021-11-07",
+    "luogo": "Casa Damiano",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 54,
+    "gara": "Scivolata su neve",
+    "proposta": "Damiano",
+    "descrizione": "Simulazione sciata con scarponi…29”70 contro 30”45",
+    "data": "2021-12-04",
+    "luogo": "Monte Livata",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 55,
+    "gara": "Staffetta su neve con Maya ed Amelie 1",
+    "proposta": "Damiano",
+    "descrizione": "Partiamo io e Lorenzo e come arriviamo al traguardo alziamo la mano e partono Maya ed Amelie (lasciate da Ilaria e Daniele e da Stefania) in base chi alza la mano per primo. Lorenzo batteva me ma Maya recuperava, però partiva in ritardo e non appena lasciata. Distacco netto.",
+    "data": "2021-12-04",
+    "luogo": "Monte Livata",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 56,
+    "gara": "Staffetta su neve con Maya ed Amelie 2",
+    "proposta": "Damiano",
+    "descrizione": "Partiamo io e Lorenzo e come arriviamo al traguardo alziamo la mano e partono Maya ed Amelie (lasciate da Ilaria e Daniele e da Stefania) in base chi alza la mano per primo. Lorenzo batteva me ma Maya recuperava, però partiva in ritardo e non appena lasciata. Distacco minimo.",
+    "data": "2021-12-04",
+    "luogo": "Monte Livata",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 57,
+    "gara": "Slittino",
+    "proposta": "Lorenzo",
+    "descrizione": "Discesa. Bonus per Damiano di 0”50 perché in una gara intermedia tra soli Maya e Amelie ha vinto Maya ma Lorenzo non l’ha accettata ufficialmente. Damiano da 7”46 passa a 6”96 per bonus contro 7”06 per Lorenzo.",
+    "data": "2021-12-04",
+    "luogo": "Monte Livata",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 58,
+    "gara": "Rotazione dado percentuale D&D",
+    "proposta": "Lorenzo",
+    "descrizione": "Al meglio dei 3. Damiano 27”60 Lorenzo 23”27. Damiano 20”25 Lorenzo 19”62.",
+    "data": "2021-12-04",
+    "luogo": "Monte Livata",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 59,
+    "gara": "Indovinare peso Maya e Amelie",
+    "proposta": "Damiano",
+    "descrizione": "Per Damiano pesava di più Amelie……per Lorenzo di più Maya. Pesava più Amelie…..di circa un paio di Kg.",
+    "data": "2022-02-25",
+    "luogo": "Casa Max",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 60,
+    "gara": "Numero flessioni (piegamenti)",
+    "proposta": "Lorenzo",
+    "descrizione": "A Percile durante trekking cagnesco. Lorenzo 35 piegamenti e Damiano 30. Ha cominciato Damiano a causa del paro e disparo.",
+    "data": "2023-09-17",
+    "luogo": "Percile",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 61,
+    "gara": "Plank",
+    "proposta": "Lorenzo",
+    "descrizione": "Tempo in Plank…….2’10” Damiano…..3’00” Lorenzo. Lorenzo dice che poteva farsi altri 2’…..ma….",
+    "data": "2023-11-01",
+    "luogo": "Zompo Lo Schioppo",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 62,
+    "gara": "Scotland Yard",
+    "proposta": "Damiano",
+    "descrizione": "Gioco Mister X portatile…..alternando mister x (inizia Damiano)",
+    "data": "2023-12-31",
+    "luogo": "Slovenia (Bohinj)",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 63,
+    "gara": "Scotland Yard",
+    "proposta": "Damiano",
+    "descrizione": "Gioco Mister X portatile…..alternando mister x (inizia Damiano)",
+    "data": "2023-12-31",
+    "luogo": "Slovenia (Bohinj)",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 64,
+    "gara": "Scotland Yard",
+    "proposta": "Damiano",
+    "descrizione": "Gioco Mister X portatile…..alternando mister x (inizia Lorenzo)",
+    "data": "2023-12-31",
+    "luogo": "Slovenia (Bohinj)",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 65,
+    "gara": "Scotland Yard",
+    "proposta": "Damiano",
+    "descrizione": "Gioco Mister X portatile…..alternando mister x (inizia Lorenzo)",
+    "data": "2023-12-31",
+    "luogo": "Slovenia (Bohinj)",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 66,
+    "gara": "Tempo Finale 1500 m Europei Atletica Roma",
+    "proposta": "Damiano",
+    "descrizione": "Tempo di vittoria: 3’31”95 - Proposta Damiano: 3’29”85 (- 2”10) - Proposta Lorenzo: 3’33”40 (+ 1”45)",
+    "data": "2024-06-12",
+    "luogo": "Roma - Stadio Olimpico",
+    "vittoria": "Lorenzo"
+  },
+  {
+    "n": 67,
+    "gara": "Sfida Passi su WeWard",
+    "proposta": "Lorenzo",
+    "descrizione": "Damiano circa 18.000 e Lorenzo circa 8.000",
+    "data": "2025-06-28",
+    "luogo": "Damiano Anzio, Lorenzo Roma",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 68,
+    "gara": "ParkRun Caffarella 5 km",
+    "proposta": "Entrambi",
+    "descrizione": "Damiano 31º in 21’03” - Lorenzo 65º in 22’50”",
+    "data": "2025-09-20",
+    "luogo": "Roma - Parco della Caffarella",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 69,
+    "gara": "Scatto su 40 cm di neve fresca",
+    "proposta": "Lorenzo",
+    "descrizione": "Dalla base della Topolino a sopra l’asfalto. Lorenzo in vantaggio inizialmente ma negli ultimi 5 m sorpasso per Damiano a causa di inciampo acido lattico Lorenzo e intralcio Amelie e Maya",
+    "data": "2026-01-25",
+    "luogo": "Monte Livata",
+    "vittoria": "Damiano"
+  },
+  {
+    "n": 70,
+    "gara": "Gara di slittini",
+    "proposta": "Entrambi",
+    "descrizione": "Discesa tecnica su 40 cm di neve fresca. 33” per Lorenzo e 39” per Damiano",
+    "data": "2026-01-25",
+    "luogo": "Monte Livata",
+    "vittoria": "Lorenzo"
+  }
+]

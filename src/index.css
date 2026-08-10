@@ -1,0 +1,61 @@
+:root {
+  --bg: #0a0d13;
+  --bg-elevated: #12161f;
+  --bg-card: #151a24;
+  --border: #232a38;
+  --text: #eef1f7;
+  --muted: #838ba0;
+  --dam: #3fa9f5;
+  --dam-dim: #3fa9f533;
+  --lor: #ff7a45;
+  --lor-dim: #ff7a4533;
+  --draw: #a78bfa;
+  --void: #4b5263;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 800px 500px at 15% -10%, rgba(63, 169, 245, 0.10), transparent),
+    radial-gradient(ellipse 800px 500px at 85% 0%, rgba(255, 122, 69, 0.10), transparent);
+  background-attachment: fixed;
+}
+
+#root { min-height: 100vh; }
+
+a { color: inherit; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection { background: var(--dam-dim); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+:focus-visible {
+  outline: 2px solid var(--dam);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
