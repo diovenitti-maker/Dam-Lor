@@ -126,6 +126,7 @@ export default function App() {
   }
 
   const { dam, lor } = computeScore(challenges)
+  const pendingCount = proposte.filter((p) => p.stato === 'in_sospeso').length
 
   return (
     <div className="app">
@@ -151,6 +152,9 @@ export default function App() {
             onClick={() => setTab(t.key)}
           >
             {t.label}
+            {t.key === 'aggiungi' && pendingCount > 0 && (
+              <span className="tab-badge">{pendingCount}</span>
+            )}
           </button>
         ))}
       </nav>
