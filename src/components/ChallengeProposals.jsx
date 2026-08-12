@@ -8,13 +8,12 @@ const EMPTY_LANCIO = {
   lanciataDa: 'Damiano',
 }
 
-export default function ChallengeProposals({ proposte, onLancia, onAccetta, onRifiuta, onElimina, onCompleta }) {
+export default function ChallengeProposals({ proposte, onLancia, onAccetta, onRilancia, onCompleta }) {
   const [form, setForm] = useState(EMPTY_LANCIO)
   const [sending, setSending] = useState(false)
 
   const inSospeso = proposte.filter((p) => p.stato === 'in_sospeso')
   const accettate = proposte.filter((p) => p.stato === 'accettata')
-  const rifiutate = proposte.filter((p) => p.stato === 'rifiutata')
 
   function update(field, value) {
     setForm((f) => ({ ...f, [field]: value }))
@@ -81,25 +80,7 @@ export default function ChallengeProposals({ proposte, onLancia, onAccetta, onRi
         <div className="proposal-group">
           <h3 className="panel-title">⏳ In sospeso — in attesa di risposta</h3>
           {inSospeso.map((p) => (
-            <div key={p.id} className="proposal-card">
-              <div className="proposal-top">
-                <span className={`badge-mini ${p.lanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
-                  Lanciata da {p.lanciataDa}
-                </span>
-                <span className="card-date">{formatData(p.dataProposta)}</span>
-              </div>
-              <h4 className="card-title">{p.gara}</h4>
-              {p.descrizione && <p className="card-desc">{p.descrizione}</p>}
-              {p.luogo && <p className="card-meta">📍 {p.luogo}</p>}
-              <div className="proposal-actions">
-                <button className="btn-accept" onClick={() => onAccetta(p.id)}>
-                  ✅ Accetta
-                </button>
-                <button className="btn-reject" onClick={() => onRifiuta(p.id)}>
-                  ❌ Rifiuta
-                </button>
-              </div>
-            </div>
+            <ProposalToRespond key={p.id} proposta={p} onAccetta={onAccetta} onRilancia={onRilancia} />
           ))}
         </div>
       )}
@@ -112,21 +93,82 @@ export default function ChallengeProposals({ proposte, onLancia, onAccetta, onRi
           ))}
         </div>
       )}
+    </div>
+  )
+}
 
-      {rifiutate.length > 0 && (
-        <div className="proposal-group">
-          <h3 className="panel-title">❌ Rifiutate</h3>
-          {rifiutate.map((p) => (
-            <div key={p.id} className="proposal-card proposal-card-muted">
-              <div className="proposal-top">
-                <span className="card-date">{p.gara}</span>
-              </div>
-              <button className="card-delete" onClick={() => onElimina(p.id)}>
-                Elimina
-              </button>
-            </div>
-          ))}
+function ProposalToRespond({ proposta, onAccetta, onRilancia }) {
+  const [countering, setCountering] = useState(false)
+  const [gara, setGara] = useState(proposta.gara)
+  const [descrizione, setDescrizione] = useState(proposta.descrizione || '')
+  const [luogo, setLuogo] = useState(proposta.luogo || '')
+  const [dataProposta, setDataProposta] = useState(proposta.dataProposta)
+  const [sending, setSending] = useState(false)
+
+  const altroGiocatore = proposta.lanciataDa === 'Damiano' ? 'Lorenzo' : 'Damiano'
+
+  async function handleRilanciaSubmit(e) {
+    e.preventDefault()
+    setSending(true)
+    try {
+      await onRilancia(proposta, { gara, descrizione, luogo, dataProposta, lanciataDa: altroGiocatore })
+      setCountering(false)
+    } finally {
+      setSending(false)
+    }
+  }
+
+  return (
+    <div className="proposal-card">
+      <div className="proposal-top">
+        <span className={`badge-mini ${proposta.lanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
+          Lanciata da {proposta.lanciataDa}
+        </span>
+        <span className="card-date">{formatData(proposta.dataProposta)}</span>
+      </div>
+      <h4 className="card-title">{proposta.gara}</h4>
+      {proposta.descrizione && <p className="card-desc">{proposta.descrizione}</p>}
+      {proposta.luogo && <p className="card-meta">📍 {proposta.luogo}</p>}
+
+      {!countering ? (
+        <div className="proposal-actions">
+          <button className="btn-accept" onClick={() => onAccetta(proposta.id)}>
+            ✅ Accetta
+          </button>
+          <button className="btn-counter" onClick={() => setCountering(true)}>
+            🔁 Rilancia
+          </button>
         </div>
+      ) : (
+        <form className="inline-complete-form" onSubmit={handleRilanciaSubmit}>
+          <p className="counter-hint">Modifica la sfida e rilanciala a nome di {altroGiocatore}</p>
+          <label className="field">
+            <span>Nome della gara</span>
+            <input type="text" value={gara} onChange={(e) => setGara(e.target.value)} required />
+          </label>
+          <div className="field-row">
+            <label className="field">
+              <span>Data proposta</span>
+              <input type="date" value={dataProposta} onChange={(e) => setDataProposta(e.target.value)} required />
+            </label>
+            <label className="field">
+              <span>Luogo</span>
+              <input type="text" value={luogo} onChange={(e) => setLuogo(e.target.value)} />
+            </label>
+          </div>
+          <label className="field">
+            <span>Descrizione / regole</span>
+            <textarea value={descrizione} onChange={(e) => setDescrizione(e.target.value)} rows={3} />
+          </label>
+          <div className="proposal-actions">
+            <button type="button" className="btn-counter" onClick={() => setCountering(false)}>
+              Annulla
+            </button>
+            <button type="submit" className="btn-accept" disabled={sending}>
+              {sending ? 'Rilancio…' : `🔁 Rilancia a ${altroGiocatore}`}
+            </button>
+          </div>
+        </form>
       )}
     </div>
   )
