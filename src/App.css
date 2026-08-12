@@ -160,6 +160,146 @@
   box-shadow: inset 0 0 0 1px var(--border);
 }
 
+.tabs-secondary {
+  margin-top: -12px;
+}
+
+.section-divider {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  margin: 24px 0 14px;
+  position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-divider::before { left: 0; }
+.section-divider::after { right: 0; }
+
+/* ---------- Regolamento ---------- */
+
+.rules-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.rules-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.rules-text {
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #dfe3ec;
+  margin: 0;
+}
+
+.rules-textarea {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: var(--font-body);
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.rules-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ---------- Proposte / Lancia sfida ---------- */
+
+.proposals {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.proposal-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proposal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.proposal-card-muted { opacity: 0.6; }
+
+.proposal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.badge-mini {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.proposal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-accept,
+.btn-reject {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.btn-accept {
+  background: var(--dam-dim);
+  color: var(--dam);
+}
+
+.btn-reject {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+}
+
+.inline-complete-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* ---------- History feed ---------- */
 
 .history-controls {
