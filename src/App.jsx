@@ -8,6 +8,7 @@ import {
   getDoc,
   getDocs,
   setDoc,
+  updateDoc,
   writeBatch,
   serverTimestamp,
 } from 'firebase/firestore'
@@ -16,18 +17,25 @@ import Scoreboard from './components/Scoreboard.jsx'
 import HistoryFeed from './components/HistoryFeed.jsx'
 import AddChallengeForm from './components/AddChallengeForm.jsx'
 import StatsView from './components/StatsView.jsx'
+import Regolamento from './components/Regolamento.jsx'
+import ChallengeProposals from './components/ChallengeProposals.jsx'
 import { computeScore } from './utils/scoring.js'
 import seedData from './data/seed.json'
 import './App.css'
 
-const TABS = [
+const TABS_TOP = [
   { key: 'storico', label: 'Storico' },
-  { key: 'aggiungi', label: 'Aggiungi' },
   { key: 'statistiche', label: 'Statistiche' },
+]
+
+const TABS_BOTTOM = [
+  { key: 'regolamento', label: 'Regolamento' },
+  { key: 'aggiungi', label: 'Aggiungi sfida' },
 ]
 
 export default function App() {
   const [challenges, setChallenges] = useState([])
+  const [proposte, setProposte] = useState([])
   const [loading, setLoading] = useState(true)
   const [tab, setTab] = useState('storico')
   const [saving, setSaving] = useState(false)
@@ -37,6 +45,14 @@ export default function App() {
       const list = snap.docs.map((d) => ({ id: d.id, ...d.data() }))
       setChallenges(list)
       setLoading(false)
+    })
+    return unsub
+  }, [])
+
+  useEffect(() => {
+    const unsub = onSnapshot(collection(db, 'proposte'), (snap) => {
+      const list = snap.docs.map((d) => ({ id: d.id, ...d.data() }))
+      setProposte(list)
     })
     return unsub
   }, [])
@@ -80,6 +96,35 @@ export default function App() {
     await deleteDoc(doc(db, 'sfide', id))
   }
 
+  async function handleLancia(form) {
+    await addDoc(collection(db, 'proposte'), { ...form, stato: 'in_sospeso', createdAt: serverTimestamp() })
+  }
+
+  async function handleAccetta(id) {
+    await updateDoc(doc(db, 'proposte', id), { stato: 'accettata' })
+  }
+
+  async function handleRifiuta(id) {
+    await updateDoc(doc(db, 'proposte', id), { stato: 'rifiutata' })
+  }
+
+  async function handleEliminaProposta(id) {
+    await deleteDoc(doc(db, 'proposte', id))
+  }
+
+  async function handleCompletaProposta(proposta, result) {
+    await addDoc(collection(db, 'sfide'), {
+      gara: proposta.gara,
+      proposta: proposta.lanciataDa,
+      descrizione: proposta.descrizione || '',
+      luogo: proposta.luogo || '',
+      data: result.data,
+      vittoria: result.vittoria,
+      createdAt: serverTimestamp(),
+    })
+    await deleteDoc(doc(db, 'proposte', proposta.id))
+  }
+
   const { dam, lor } = computeScore(challenges)
 
   return (
@@ -87,7 +132,19 @@ export default function App() {
       <Scoreboard challenges={challenges} dam={dam} lor={lor} />
 
       <nav className="tabs">
-        {TABS.map((t) => (
+        {TABS_TOP.map((t) => (
+          <button
+            key={t.key}
+            className={`tab ${tab === t.key ? 'tab-active' : ''}`}
+            onClick={() => setTab(t.key)}
+          >
+            {t.label}
+          </button>
+        ))}
+      </nav>
+
+      <nav className="tabs tabs-secondary">
+        {TABS_BOTTOM.map((t) => (
           <button
             key={t.key}
             className={`tab ${tab === t.key ? 'tab-active' : ''}`}
@@ -104,8 +161,22 @@ export default function App() {
         ) : (
           <>
             {tab === 'storico' && <HistoryFeed challenges={challenges} onDelete={handleDelete} />}
-            {tab === 'aggiungi' && <AddChallengeForm onSubmit={handleAdd} saving={saving} />}
             {tab === 'statistiche' && <StatsView challenges={challenges} />}
+            {tab === 'regolamento' && <Regolamento />}
+            {tab === 'aggiungi' && (
+              <>
+                <ChallengeProposals
+                  proposte={proposte}
+                  onLancia={handleLancia}
+                  onAccetta={handleAccetta}
+                  onRifiuta={handleRifiuta}
+                  onElimina={handleEliminaProposta}
+                  onCompleta={handleCompletaProposta}
+                />
+                <div className="section-divider">Oppure registra subito un risultato</div>
+                <AddChallengeForm onSubmit={handleAdd} saving={saving} />
+              </>
+            )}
           </>
         )}
       </main>
