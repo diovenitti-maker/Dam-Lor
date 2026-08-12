@@ -104,12 +104,9 @@ export default function App() {
     await updateDoc(doc(db, 'proposte', id), { stato: 'accettata' })
   }
 
-  async function handleRifiuta(id) {
-    await updateDoc(doc(db, 'proposte', id), { stato: 'rifiutata' })
-  }
-
-  async function handleEliminaProposta(id) {
-    await deleteDoc(doc(db, 'proposte', id))
+  async function handleRilancia(proposta, nuovoForm) {
+    await addDoc(collection(db, 'proposte'), { ...nuovoForm, stato: 'in_sospeso', createdAt: serverTimestamp() })
+    await deleteDoc(doc(db, 'proposte', proposta.id))
   }
 
   async function handleCompletaProposta(proposta, result) {
@@ -173,8 +170,7 @@ export default function App() {
                   proposte={proposte}
                   onLancia={handleLancia}
                   onAccetta={handleAccetta}
-                  onRifiuta={handleRifiuta}
-                  onElimina={handleEliminaProposta}
+                  onRilancia={handleRilancia}
                   onCompleta={handleCompletaProposta}
                 />
                 <div className="section-divider">Oppure registra subito un risultato</div>
