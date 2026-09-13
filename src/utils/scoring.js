@@ -1,9 +1,33 @@
-// Ordina le sfide per data crescente (poi per "n" storico come spareggio)
+// Converte una data (stringa ISO "YYYY-MM-DD", "DD/MM/YYYY", o altro formato) in un timestamp comparabile
+function parseDateSafe(str) {
+  if (!str) return 0
+  const iso = /^(\d{4})-(\d{2})-(\d{2})/.exec(str)
+  if (iso) {
+    const [, y, m, d] = iso
+    return Date.UTC(Number(y), Number(m) - 1, Number(d))
+  }
+  const dmy = /^(\d{2})\/(\d{2})\/(\d{4})/.exec(str)
+  if (dmy) {
+    const [, d, m, y] = dmy
+    return Date.UTC(Number(y), Number(m) - 1, Number(d))
+  }
+  const t = new Date(str).getTime()
+  return isNaN(t) ? 0 : t
+}
+
+// Ordina le sfide per data crescente. A parità di data usa "n" (ordine storico dell'Excel)
+// quando presente, altrimenti l'orario di inserimento (createdAt) come spareggio stabile.
 export function sortByDate(challenges) {
   return [...challenges].sort((a, b) => {
-    const d = new Date(a.data) - new Date(b.data)
-    if (d !== 0) return d
-    return (a.n || 0) - (b.n || 0)
+    const da = parseDateSafe(a.data)
+    const db = parseDateSafe(b.data)
+    if (da !== db) return da - db
+
+    if (a.n != null && b.n != null) return a.n - b.n
+
+    const ca = a.createdAt?.seconds ?? 0
+    const cb = b.createdAt?.seconds ?? 0
+    return ca - cb
   })
 }
 
