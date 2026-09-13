@@ -487,16 +487,24 @@
   color: var(--muted);
 }
 
-.card-delete {
+.card-card-actions {
+  display: flex;
+  gap: 16px;
   margin-top: 10px;
+}
+
+.card-edit,
+.card-delete {
   background: transparent;
   border: none;
   color: var(--muted);
   font-size: 11px;
   text-decoration: underline;
   padding: 0;
+  margin-top: 0;
 }
 
+.card-edit:hover { color: var(--dam); }
 .card-delete:hover { color: var(--lor); }
 
 /* ---------- Add form ---------- */
