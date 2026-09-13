@@ -96,6 +96,10 @@ export default function App() {
     await deleteDoc(doc(db, 'sfide', id))
   }
 
+  async function handleUpdate(id, form) {
+    await updateDoc(doc(db, 'sfide', id), { ...form })
+  }
+
   async function handleLancia(form) {
     await addDoc(collection(db, 'proposte'), { ...form, stato: 'in_sospeso', createdAt: serverTimestamp() })
   }
@@ -161,7 +165,9 @@ export default function App() {
           <p className="empty-state">Caricamento del tabellone…</p>
         ) : (
           <>
-            {tab === 'storico' && <HistoryFeed challenges={challenges} onDelete={handleDelete} />}
+            {tab === 'storico' && (
+              <HistoryFeed challenges={challenges} onDelete={handleDelete} onUpdate={handleUpdate} />
+            )}
             {tab === 'statistiche' && <StatsView challenges={challenges} />}
             {tab === 'regolamento' && <Regolamento />}
             {tab === 'aggiungi' && (
