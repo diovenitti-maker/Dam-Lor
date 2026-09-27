@@ -181,7 +181,7 @@ function ProposalToRespond({ proposta, onAccetta, onRilancia }) {
               Annulla
             </button>
             <button type="submit" className="btn-accept" disabled={sending}>
-              {sending ? 'Rilancio…' : `🔁 Rilancia a ${altroGiocatore}`}
+              {sending ? 'Rilancio…' : `🔁 Rilancia ${altroGiocatore}`}
             </button>
           </div>
         </form>
