@@ -105,13 +105,22 @@ function ProposalToRespond({ proposta, onAccetta, onRilancia }) {
   const [dataProposta, setDataProposta] = useState(proposta.dataProposta)
   const [sending, setSending] = useState(false)
 
-  const altroGiocatore = proposta.lanciataDa === 'Damiano' ? 'Lorenzo' : 'Damiano'
+  // Chi ha "in mano" la proposta ora è l'ultimo che l'ha rilanciata (o chi l'ha lanciata, se non è mai stata rilanciata)
+  const ultimoAutore = proposta.rilanciataDa || proposta.lanciataDa
+  const altroGiocatore = ultimoAutore === 'Damiano' ? 'Lorenzo' : 'Damiano'
 
   async function handleRilanciaSubmit(e) {
     e.preventDefault()
     setSending(true)
     try {
-      await onRilancia(proposta, { gara, descrizione, luogo, dataProposta, lanciataDa: altroGiocatore })
+      await onRilancia(proposta, {
+        gara,
+        descrizione,
+        luogo,
+        dataProposta,
+        lanciataDa: proposta.lanciataDa,
+        rilanciataDa: altroGiocatore,
+      })
       setCountering(false)
     } finally {
       setSending(false)
@@ -121,9 +130,16 @@ function ProposalToRespond({ proposta, onAccetta, onRilancia }) {
   return (
     <div className="proposal-card">
       <div className="proposal-top">
-        <span className={`badge-mini ${proposta.lanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
-          Lanciata da {proposta.lanciataDa}
-        </span>
+        <div className="badge-stack">
+          <span className={`badge-mini ${proposta.lanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
+            Lanciata da {proposta.lanciataDa}
+          </span>
+          {proposta.rilanciataDa && (
+            <span className={`badge-mini ${proposta.rilanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
+              🔁 Rilanciata da {proposta.rilanciataDa}
+            </span>
+          )}
+        </div>
         <span className="card-date">{formatData(proposta.dataProposta)}</span>
       </div>
       <h4 className="card-title">{proposta.gara}</h4>
@@ -193,7 +209,16 @@ function ProposalToComplete({ proposta, onCompleta }) {
   return (
     <div className="proposal-card">
       <div className="proposal-top">
-        <span className="card-date">Lanciata da {proposta.lanciataDa}</span>
+        <div className="badge-stack">
+          <span className={`badge-mini ${proposta.lanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
+            Lanciata da {proposta.lanciataDa}
+          </span>
+          {proposta.rilanciataDa && (
+            <span className={`badge-mini ${proposta.rilanciataDa === 'Damiano' ? 'text-dam' : 'text-lor'}`}>
+              🔁 Rilanciata da {proposta.rilanciataDa}
+            </span>
+          )}
+        </div>
       </div>
       <h4 className="card-title">{proposta.gara}</h4>
       {proposta.descrizione && <p className="card-desc">{proposta.descrizione}</p>}
