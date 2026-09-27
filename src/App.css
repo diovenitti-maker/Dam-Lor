@@ -275,8 +275,15 @@
 .proposal-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 6px;
+  gap: 10px;
+}
+
+.badge-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .badge-mini {
